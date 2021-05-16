@@ -83,7 +83,7 @@ void printD(int n) {
         for(int j=1;j<=n;j++)
         {
 
-           if(j==1||j==n||i==1||i==n)
+           if(j==3||j==n||i==1||i==n)
         {
          printf("*");
         }else{
@@ -230,7 +230,7 @@ void printJ(int n){
         for(int j=1;j<=n;j++)
         {
 
-           if(j==n || i==n  )
+           if(j==n || i==n  || (j==1 && i>=2*n/3+1))
         {
          printf("*");
         }else{
@@ -398,13 +398,16 @@ void printR(int n) {
     
     for(int i=1;i<=n;i++)
     {
-        if(i==1||i==n/2+1||j==1||(j==n && i<=n/2+1) || (j==i && i>=n/2+1 && j>=n/2+1))
+        for(int j=1;j<=n;j++)
+        {
+        if(i==1||i==n/2+1||j==1||(j==n && i<=n/2+1) || (j==i && i>=n/2+1))
         {
             printf("*");
         }else{
             printf(" ");
         }
-        printf("\n");
+    }
+    printf("\n");
     }
 
    
